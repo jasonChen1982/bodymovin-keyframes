@@ -1,8 +1,11 @@
 {
   "name": "bodymovin-keyframes",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "a generate css keyframes toolkit base on bodymovin",
+  "main": "./src/cli.js",
+  "bin": {
+    "keyframes": "./src/cli.js"
+  },
   "scripts": {
     "ver": "standard-version -m 'chore(release): v%s'",
     "postver": "git push --follow-tags origin master && npm publish",
