@@ -43,6 +43,8 @@
     }
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-angular": "^7.0.1",
     "eslint": "^5.2.0",
     "eslint-config-egg": "^7.0.0",
     "standard-version": "^4.4.0",
