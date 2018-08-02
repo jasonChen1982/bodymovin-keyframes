@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    "prefer-rest-params": 0,
+    "no-bitwise": 0
+  }
+}
