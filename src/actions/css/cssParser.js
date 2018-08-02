@@ -31,7 +31,7 @@ module.exports = function(data, clayers, options) {
     });
   });
   return Promise.all(queue)
-  .then(css => {
-    fs.writeFileSync(path.resolve(baseDir, 'animation.styl'), css.join('\n'));
-  });
+    .then(css => {
+      fs.writeFileSync(path.resolve(baseDir, 'animation.styl'), css.join('\n'));
+    });
 };

@@ -16,30 +16,30 @@ exports.command = 'css';
 exports.desc = '将AE导出的数据解析成相应的CSS3的keyframes';
 exports.builder = yargs => {
   return yargs
-  .option('path', {
-    alias: 'p',
-    describe: '数据目录, data.json所在的目录',
-    default: './animations/data.json',
-  })
-  .option('layout', {
-    alias: 'l',
-    describe: '是否开启智能布局',
-    default: true,
-  })
-  .option('rem', {
-    alias: 'r',
-    describe: '是否将像素单位转化成rem',
-    default: false,
-  })
-  .option('fontsize', {
-    alias: 'f',
-    describe: '设置rem的根数值，px 转 rem 的比例',
-    default: 1000,
-  })
-  .boolean([
-    'layout',
-    'rem',
-  ]);
+    .option('path', {
+      alias: 'p',
+      describe: '数据目录, data.json所在的目录',
+      default: './animations/data.json',
+    })
+    .option('layout', {
+      alias: 'l',
+      describe: '是否开启智能布局',
+      default: true,
+    })
+    .option('rem', {
+      alias: 'r',
+      describe: '是否将像素单位转化成rem',
+      default: false,
+    })
+    .option('fontsize', {
+      alias: 'f',
+      describe: '设置rem的根数值，px 转 rem 的比例',
+      default: 1000,
+    })
+    .boolean([
+      'layout',
+      'rem',
+    ]);
 };
 exports.handler = function(argv) {
   const filePath = path.resolve(cwd, argv.path);
@@ -55,8 +55,8 @@ exports.handler = function(argv) {
     cssParser(data, animations, argv).then(() => {
       console.log(chalk.red('  end parser...'));
     })
-    .catch(err => {
-      console.log(err);
-    });
+      .catch(err => {
+        console.log(err);
+      });
   });
 };

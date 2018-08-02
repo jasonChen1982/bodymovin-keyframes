@@ -27,12 +27,11 @@
   "homepage": "https://github.com/jasonChen1982/bodymovin-keyframes#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-angular": "^7.0.1",
     "@commitlint/config-conventional": "^7.0.1",
     "eslint": "^5.2.0",
     "eslint-config-egg": "^7.0.0",
-    "standard-version": "^4.4.0",
-    "validate-commit-msg": "^2.14.0"
+    "husky": "^0.14.3",
+    "standard-version": "^4.4.0"
   },
   "dependencies": {
     "autoprefixer-stylus": "^0.14.0",
