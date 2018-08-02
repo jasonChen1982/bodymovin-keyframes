@@ -123,7 +123,7 @@ Layer.prototype.getLayout = function() {
     }
   }
 
-  // deal with css width height and background
+  // deal with css width、height、background style
   let w = 0;
   let h = 0;
   let width = 0;
@@ -151,7 +151,7 @@ background-size: ${width} ${height};
 `;
   }
 
-  // compose layout and width height background style
+  // compose layout and width、height、background style
   return `
 position: absolute;
 top: ${top};

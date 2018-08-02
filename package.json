@@ -4,16 +4,42 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ver": "standard-version -m 'chore(release): v%s'",
+    "postver": "git push --follow-tags origin master && npm publish",
+    "lint": "eslint .",
+    "fix": "eslint --fix ./src",
+    "precommit": "npm run lint",
+    "commitmsg": "validate-commit-msg",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jasonChen1982/bodymovin-keyframes.git"
   },
-  "author": "",
+  "author": {
+    "name": "jasonChen1982",
+    "email": "jasonchen1882@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jasonChen1982/bodymovin-keyframes/issues"
   },
-  "homepage": "https://github.com/jasonChen1982/bodymovin-keyframes#readme"
+  "homepage": "https://github.com/jasonChen1982/bodymovin-keyframes#readme",
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "release",
+        "revert",
+        "deps"
+      ]
+    }
+  }
 }
